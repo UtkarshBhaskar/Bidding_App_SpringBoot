@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <!-- Search Section -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input type="text" class="form-control custom-search" [(ngModel)]="searchQuery"
+               placeholder="Search for products...">
+        <div class="input-group-append">
+          <button class="btn btn-secondary custom-search-btn" (click)="searchProducts()">Search Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Cards Section -->
+  <div class="row">
+    <div *ngFor="let product of productsNotInSeller" class="col-md-4 mb-4">
+      <div class="card shadow-sm custom-card">
+        <div class="card-header custom-card-header">
+          <img [src]="base_url+'/api/products/'+product.id+'/images'" class="card-img-top custom-card-img rounded-circle"
+               alt="Product Image">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title custom-card-title">{{ product.name }}</h5>
+          <p class="card-title custom-card-text text-muted">Category: {{ product.category }}</p>
+          <p class="card-text custom-card-text">{{ product.description }}</p>
+        </div>
+        <div class="card-footer custom-card-footer">
+          <p class="card-text custom-card-price">Price: ₿ {{ product.askingPrice }}</p>
+          <button class="btn btn-dark btn-sm custom-btn" (click)="navigateToDetails(product.id)">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

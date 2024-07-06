@@ -1,0 +1,171 @@
+<!--<ngx-spinner fullScreen="false">-->
+<!--  <p style="font-size: 20px; color: white">Loading...</p>-->
+<!--</ngx-spinner>-->
+<!--<div class="auth-wrapper d-flex no-block justify-content-center align-items-center">-->
+<!--  &lt;!&ndash;  style="background:url(../../../../assets/images/big/auth-bg.jpg) no-repeat center center;"&ndash;&gt;-->
+<!--  <div class="auth-box" style="max-width: 500px">-->
+<!--    <div id="signupForm" [ngClass]="{'d-none': signupFormShow}">-->
+<!--      <div class="logo">-->
+<!--        <h2 class="font-medium m-b-20 text-base font-weight-bold text-uppercase">Get started with</h2>-->
+<!--        <h2 class="font-medium m-b-20 text-warning font-weight-bold text-uppercase">bitsbids</h2>-->
+<!--      </div>-->
+<!--      <alert fade="true"></alert>-->
+<!--      &lt;!&ndash; Form &ndash;&gt;-->
+<!--      <div class="row">-->
+<!--        <div class="col-12">-->
+<!--          <form class="form-horizontal m-t-20" [formGroup]="registerForm" (ngSubmit)="doRegistration()">-->
+<!--            <div class="">-->
+<!--              <input class="form-control form-control-lg text-base" type="text" name="name"-->
+<!--                     formControlName="name"-->
+<!--                     placeholder="Name"-->
+<!--                     [ngClass]="{ 'is-invalid': submitted && fields.name.errors }">-->
+<!--              <div *ngIf="submitted && fields.name.errors" class="invalid-feedback">-->
+<!--                <div *ngIf="fields.name.errors.required">Name is required</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="">-->
+<!--              <input class="form-control form-control-lg" type="email" formControlName="email"-->
+<!--                     placeholder="Email*"-->
+<!--                     [ngClass]="{ 'is-invalid': submitted && fields.email.errors }">-->
+<!--              <div *ngIf="submitted && fields.email.errors" class="invalid-feedback">-->
+<!--                <div *ngIf="fields.email.errors.required">Email is required</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="">-->
+<!--              <input class="form-control form-control-lg" type="text" formControlName="username"-->
+<!--                     placeholder="Username*"-->
+<!--                     [ngClass]="{ 'is-invalid': submitted && fields.username.errors }">-->
+<!--              <div *ngIf="submitted && fields.username.errors" class="invalid-feedback">-->
+<!--                <div *ngIf="fields.username.errors.required">Username is required</div>-->
+<!--                <div *ngIf="fields.username.errors.invalidFormat">Invalid ID</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="">-->
+<!--              <input class="form-control form-control-lg" type="password" formControlName="password"-->
+<!--                     placeholder="{{'password' | translate}}*"-->
+<!--                     [ngClass]="{ 'is-invalid': submitted && fields.password.errors }">-->
+<!--              <div *ngIf="submitted && fields.password.errors" class="invalid-feedback">-->
+<!--                <div *ngIf="fields.password.errors.required">Valid Pass is Required</div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <div class="form-group text-center ">-->
+<!--              <div class="col-xs-12">-->
+<!--                <button class="btn btn-block btn-md btn-rounded btn-default text-white font-weight-bold" type="submit ">-->
+<!--                  {{'signup' | translate}}-->
+<!--                </button>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="form-group m-b-0">-->
+<!--              <div class="col-sm-12 text-center ">-->
+<!--                {{'yes_account' | translate}}? <a href="#/authentication/login"-->
+<!--                                                  class="text-info m-l-5 "><b>{{'login' | translate}}</b></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div id="recoverform" [ngClass]="{'d-block': signupFormShow}">-->
+<!--      <div class="logo">-->
+<!--        <span class="db"><img src="../../../../assets/images/logo.png" style="max-width: 40%" alt="logo"/></span>-->
+<!--        <h2 class="font-medium m-b-20 text-success">{{'congrats' | translate}}</h2>-->
+<!--        &lt;!&ndash;        <p>A verification link is sent to your email</p>&ndash;&gt;-->
+<!--        <a href="#/authentication/login">{{'succ_signup_verification' | translate}}</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <div class="mb-md-2 mt-md-4">
+              <h2 class="fw-bold mb-2 text-uppercase">Sign Up as New User</h2>
+              <form class="form-horizontal m-t-20" [formGroup]="registerForm" (ngSubmit)="doRegistration()">
+                <div class="">
+                  <input class="form-control form-control-lg text-base" type="text" name="name"
+                         formControlName="name"
+                         placeholder="Name"
+                         [ngClass]="{ 'is-invalid': submitted && fields.name.errors }">
+                  <div *ngIf="submitted && fields.name.errors" class="invalid-feedback">
+                    <div *ngIf="fields.name.errors.required">Name is required</div>
+                  </div>
+                </div>
+                <br>
+                <div class="">
+                  <input class="form-control form-control-lg" type="text" formControlName="email"
+                         placeholder="BITS Email*"
+                         [ngClass]="{ 'is-invalid': submitted && fields.email.errors }">
+                  <div *ngIf="submitted && fields.email.errors" class="invalid-feedback">
+                    <div *ngIf="fields.email.errors.required">Email is required</div>
+                    <div *ngIf="fields.email.errors.invalidEmail">Email is Invalid</div>
+                  </div>
+                </div>
+                <br>
+                <div class="">
+                  <input class="form-control form-control-lg" type="text" formControlName="phone"
+                         placeholder="Contact Number*"
+                         [ngClass]="{ 'is-invalid': submitted && fields.phone.errors }">
+                  <div *ngIf="submitted && fields.phone.errors" class="invalid-feedback">
+                    <div *ngIf="fields.phone.errors.required">Phone is required</div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="">
+                  <input class="form-control form-control-lg" type="text" formControlName="hostel"
+                         placeholder="Room Number*"
+                         [ngClass]="{ 'is-invalid': submitted && fields.hostel.errors }">
+                  <div *ngIf="submitted && fields.hostel.errors" class="invalid-feedback">
+                    <div *ngIf="fields.hostel.errors.required">Hostel Name is required</div>
+                  </div>
+                </div>
+                <br>
+                <div class="">
+                  <input class="form-control form-control-lg" type="text" [disabled] formControlName="username"
+                         placeholder="BITS UID (Username)*"
+                         [ngClass]="{ 'is-invalid': submitted && fields.username.errors }">
+                  <div *ngIf="submitted && fields.username.errors" class="invalid-feedback">
+                    <div *ngIf="fields.username.errors.required">Username is required</div>
+                    <div *ngIf="fields.username.errors.invalidFormat">Invalid ID</div>
+                  </div>
+                </div>
+                <br>
+                <div class="">
+                  <input class="form-control form-control-lg" type="password" formControlName="password"
+                         placeholder="{{'password' | translate}}*"
+                         [ngClass]="{ 'is-invalid': submitted && fields.password.errors }">
+                  <div *ngIf="submitted && fields.password.errors" class="invalid-feedback">
+                    <div *ngIf="fields.password.errors.required">Valid Pass is Required</div>
+                  </div>
+                </div>
+                <br>
+                <div class="form-group text-center ">
+                  <div class="col-xs-12">
+                    <button class="btn btn-block btn-md btn-rounded btn-default text-white font-weight-bold" type="submit">
+                      {{'signup' | translate}}
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group m-b-0">
+                  <div class="col-sm-12 text-center ">
+                    {{'yes_account' | translate}} <a href="#/authentication/login"
+                                                      class="text-info m-l-5 "><b>{{'login' | translate}}</b></a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
